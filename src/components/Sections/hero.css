@@ -1,0 +1,113 @@
+.hero {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  transition: background-color 0.5s ease-in-out; /* Transición de color de fondo */
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Ajusté el espacio entre los botones */
+  margin-bottom: 20px;
+}
+
+.categories-btn {
+  background: transparent; /* Fondo transparente por defecto */
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Para suavizar la transición al hacer hover */
+}
+
+.categories-btn:hover {
+  background: rgba(169, 169, 169, 0.4); /* Gris claro al pasar el mouse */
+}
+
+.explore-btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filters span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Estilos para el SearchBar dentro del Hero */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  padding: 12px 18px;
+  border-radius: 30px;
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+  transition: background 0.3s ease;
+  position: relative; /* Para posicionar la "X" dentro del input */
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 15px;
+  outline: none;
+  margin-right: 10px;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Placeholder con color más claro */
+}
+
+.search-bar .clear-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 15px; /* Posicionamos la "X" al final del input */
+  top: 50%;
+  transform: translateY(-50%); /* Centrado vertical */
+  transition: color 0.3s ease;
+}
+
+.search-bar .clear-btn:hover {
+  color: rgb(255, 0, 0); /* Rojo al pasar el ratón */
+}
