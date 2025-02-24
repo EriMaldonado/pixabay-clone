@@ -13,7 +13,7 @@ function Footer() {
           <a href="/pixabay-clone/#">
             <img
               src="./src/assets/pixabay.png"
-              alt="Pixabay Logo"
+              alt="Pixabay"
               width={160}
               height={40}
             />
@@ -53,28 +53,28 @@ function Footer() {
           <h4>Descubrir</h4>
           <ul>
             <li>
-              <a href="/">Nuestra selección</a>
+              <a href="/pixabay-clone/#">Nuestra selección</a>
             </li>
             <li>
-              <a href="/">Colecciones seleccionadas</a>
+              <a href="/pixabay-clone/#">Colecciones seleccionadas</a>
             </li>
             <li>
-              <a href="/">Radio Pixabay</a>
+              <a href="/pixabay-clone/#">Radio Pixabay</a>
             </li>
             <li>
-              <a href="/">Nuevo</a>
+              <a href="/pixabay-clone/#">Nuevo</a>
             </li>
             <li>
-              <a href="/">Imágenes populares</a>
+              <a href="/pixabay-clone/#">Imágenes populares</a>
             </li>
             <li>
-              <a href="/">Vídeos populares</a>
+              <a href="/pixabay-clone/#">Vídeos populares</a>
             </li>
             <li>
-              <a href="/">Música más escuchada</a>
+              <a href="/pixabay-clone/#">Música más escuchada</a>
             </li>
             <li>
-              <a href="/">Búsquedas populares</a>
+              <a href="/pixabay-clone/#">Búsquedas populares</a>
             </li>
           </ul>
         </div>
@@ -82,16 +82,16 @@ function Footer() {
           <h4>Comunidad</h4>
           <ul>
             <li>
-              <a href="/">Blog</a>
+              <a href="/pixabay-clone/#">Blog</a>
             </li>
             <li>
-              <a href="/">Foro</a>
+              <a href="/pixabay-clone/#">Foro</a>
             </li>
             <li>
-              <a href="/">Creadores</a>
+              <a href="/pixabay-clone/#">Creadores</a>
             </li>
             <li>
-              <a href="/">Cámaras</a>
+              <a href="/pixabay-clone/#">Cámaras</a>
             </li>
           </ul>
         </div>
@@ -99,43 +99,42 @@ function Footer() {
           <h4>Conócenos</h4>
           <ul>
             <li>
-              <a href="/">Acerca de nosotros</a>
+              <a href="/pixabay-clone/#">Acerca de nosotros</a>
             </li>
             <li>
-              <a href="/">Preguntas Frecuentes</a>
+              <a href="/pixabay-clone/#">Preguntas Frecuentes</a>
             </li>
             <li>
-              <a href="/">Resumen de licencia</a>
+              <a href="/pixabay-clone/#">Resumen de licencia</a>
             </li>
             <li>
-              <a href="/">Condiciones de Uso</a>
+              <a href="/pixabay-clone/#">Condiciones de Uso</a>
             </li>
             <li>
-              <a href="/">Políticas de Privacidad</a>
+              <a href="/pixabay-clone/#">Políticas de Privacidad</a>
             </li>
             <li>
-              <a href="/">Política de cookies</a>
+              <a href="/pixabay-clone/#">Política de cookies</a>
             </li>
             <li>
-              <a href="/">Ley de Servicios Digitales</a>
+              <a href="/pixabay-clone/#">Ley de Servicios Digitales</a>
             </li>
             <li>
-              <a href="/">Reportar contenido</a>
+              <a href="/pixabay-clone/#">Reportar contenido</a>
             </li>
             <li>
-              <a href="/">API</a>
+              <a href="/pixabay-clone/#">API</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Pixabay Clone - Todos los derechos
-          reservados.
+          &copy; {new Date().getFullYear()} Pixabay Clone
         </p>
         <p>
-          <a href="/">Política de Privacidad</a> |{" "}
-          <a href="/">Términos de Uso</a>
+          <a href="/pixabay-clone/#">Política de Privacidad</a> |{" "}
+          <a href="/pixabay-clone/#">Términos de Uso</a>
         </p>
       </div>
     </footer>

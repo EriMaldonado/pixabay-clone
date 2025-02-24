@@ -43,7 +43,7 @@ function Header({ setImages, setQuery, query, category }) {
         <a href="/pixabay-clone/#">
           <img
             src="./src/assets/pixabay.png"
-            alt="Pixabay Logo"
+            alt="Pixabay"
             width={120}
             height={36}
           />
