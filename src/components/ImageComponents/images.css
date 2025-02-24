@@ -1,0 +1,342 @@
+/* Estilos para la galería de imágenes */
+.image-gallery-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  background-color: #ffff;
+}
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery-header h1 {
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 70%;
+}
+.gallery-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.gallery-buttons button {
+  padding: 8px 15px;
+  color: #333;
+  background-color: #ffffff;
+  border: 2px solid #d0e7f9;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  max-width: 200px;
+  width: auto;
+}
+
+.gallery-buttons button:hover {
+  background-color: #ffffff;
+  border-color: #3c474f;
+}
+
+.gallery-buttons button.selected {
+  background-color: #ece8e8;
+  color: #222323;
+  border-color: #2e2f31;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-card {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-wrapper {
+  width: 100%;
+  padding-top: 80%;
+  position: relative;
+  background-color: #e0e0e0;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-info {
+  padding: 10px;
+  background-color: #fff;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+.user {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stats {
+  font-size: 12px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Estilos para la página de detalle de imagen */
+.image-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.image-detail-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-user {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #555;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.image-detail-body {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-detail-left {
+  flex: 3;
+  text-align: center;
+}
+
+.image-detail-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-detail-right {
+  flex: 2;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.image-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button,
+a {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.8;
+}
+
+.download-btn,
+.edit-btn {
+  width: auto;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.download-btn {
+  background-color: #28a745;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.edit-btn {
+  background-color: #647074;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border-radius: 30px;
+  background-color: #7f8183;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #3e3f3f;
+  transform: scale(1.1);
+}
+
+.pagination button:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+  color: #7f8c8d;
+}
+
+.pagination .text {
+  font-size: 16px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .image-detail-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-detail-left {
+    text-align: center;
+    width: 100%;
+  }
+
+  .image-detail-img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .image-detail-right {
+    width: 100%;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .download-btn,
+  .edit-btn {
+    max-width: 150px;
+  }
+
+  .gallery-header h1 {
+    font-size: 12px;
+  }
+  .gallery-buttons button {
+    font-size: 12px;
+    max-width: 150px;
+  }
+
+  .pagination button {
+    font-size: 12px;
+  }
+
+  .pagination .text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-detail-header h1 {
+    font-size: 18px;
+  }
+
+  .image-user {
+    font-size: 14px;
+  }
+
+  .image-info h2 {
+    font-size: 20px;
+  }
+
+  .image-info p {
+    font-size: 12px;
+  }
+
+  .buttons-container button {
+    font-size: 12px;
+    max-width: 120px;
+  }
+
+  .gallery-header h1 {
+    font-size: 10px;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery .image-card {
+    width: 100%;
+  }
+}

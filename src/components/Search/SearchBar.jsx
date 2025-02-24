@@ -1,30 +1,47 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
+import "../Search/searchBar.css";
 
-// eslint-disable-next-line react/prop-types
-function SearchBar({ setImages }) {
-  const [query, setQuery] = useState("");
+function SearchBar({ setImages, setQuery, setCurrentPage, query }) {
+  const [queryInput, setQueryInput] = useState(query || "");
 
-  const fetchImages = async () => {
-    if (query.trim() === "") return; // Verificamos si la consulta no está vacía
+  useEffect(() => {
+    setQueryInput(query);
+  }, [query]);
 
-    const API_KEY = import.meta.env.VITE_PIXABAY_API_KEY;
-    const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${query}&image_type=photo`;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!queryInput.trim()) return;
 
-    const res = await fetch(URL);
-    const data = await res.json();
-    setImages(data.hits); // Aquí actualizamos el estado de las imágenes en Home
+    setQuery(queryInput);
+    setCurrentPage(1);
+    try {
+      const API_KEY = import.meta.env.VITE_PIXABAY_API_KEY;
+      const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(
+        queryInput
+      )}&image_type=photo&page=1&per_page=30`;
+
+      const res = await fetch(URL);
+      if (!res.ok) {
+        throw new Error(`Error ${res.status}: ${res.statusText}`);
+      }
+      const data = await res.json();
+      setImages(data.hits || []); 
+    } catch (error) {
+      console.error("Error al obtener las imágenes:", error.message);
+    }
   };
 
   return (
-    <div>
+    <form className="search-bar" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Buscar imágenes, videos, música y otros contenidos gratuitos"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={queryInput}
+        onChange={(e) => setQueryInput(e.target.value)}
       />
-      <button onClick={fetchImages}>Buscar</button>
-    </div>
+      <button type="submit">Buscar</button>
+    </form>
   );
 }
 
